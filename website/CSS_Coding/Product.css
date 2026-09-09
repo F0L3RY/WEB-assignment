@@ -1,0 +1,271 @@
+#night-mode {
+    display: none;
+}
+
+.theme-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    width: 65px;
+    height: 35px;
+
+    background-color: #444;
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7px;
+    box-sizing: border-box;
+
+    transition: 0.4s;
+
+    z-index: 1000;
+}
+
+.theme-switch .sun,
+.theme-switch .moon {
+    font-size: 18px;
+}
+
+
+
+.page {
+    min-height: 100vh;
+
+    background-color: #121212;
+    color: white;
+
+    transition: 0.4s;
+
+    padding: 10px;
+}
+
+
+
+#night-mode:checked ~ .page {
+    background-color: #808080;
+    color: black;
+}
+
+
+#night-mode:checked ~ .page h1,
+#night-mode:checked ~ .page h2,
+#night-mode:checked ~ .page h3 {
+    color: black;
+}
+
+
+#night-mode:checked ~ .page p {
+    color: #222;
+}
+
+
+
+#night-mode:checked ~ .page a {
+    color: #003366;
+}
+
+
+
+
+.page h1,
+.page h2,
+.page h3 {
+    color: white;
+}
+
+.page p {
+    color: #dddddd;
+}
+
+.page a {
+    color: #66b3ff;
+}
+
+
+
+
+.page table {
+    background-color: #1e1e1e;
+    color: white;
+    border-color: #666;
+}
+
+.page td {
+    border-color: #666;
+}
+
+
+
+
+#night-mode:checked ~ .page table {
+    background-color: #b0b0b0;
+    color: black;
+    border-color: #333;
+}
+
+#night-mode:checked ~ .page td {
+    border-color: #333;
+}
+
+
+.page button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #777;
+}
+
+
+
+
+#night-mode:checked ~ .page button {
+    background-color: #d0d0d0;
+    color: black;
+    border: 1px solid #333;
+}
+
+
+
+.page hr {
+    border-color: #666;
+}
+
+.page font {
+    color: #f3f3f3;
+}
+
+table td {
+    transition: 0.3s ease;
+}
+
+/* When mouse is over a table block */
+table td:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px purple;
+    background-color: black;
+}
+
+/* Day mode hover */
+#night-mode:checked ~ .page table td:hover {
+    background-color: #999999;
+    box-shadow: 0 8px 20px cyan;
+}
+
+/* =========================
+   The settingsFILTER
+   ========================= */
+
+.filter-buttons {
+    text-align: center;
+    margin: 25px;
+}
+
+/* Hide radio buttons */
+
+.filter-buttons input {
+    display: none;
+}
+
+/* Buttons */
+
+.filter-buttons label {
+    display: inline-block;
+
+    padding: 12px 20px;
+    margin: 5px;
+
+    background-color: #333;
+    color: white;
+
+    border: 2px solid #555;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover */
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    transition: 0.3s ease;
+}
+.category-link:hover h3 {
+    color: yellowgreen;
+}
+
+.category-link p {
+    color: inherit;
+}
+
+/* Selected button */
+
+.filter-buttons input:checked + label {
+    background-color: #007bff;
+    border-color: #00c3ff;
+}
+
+
+/* =========================
+   SHOW ALL BY DEFAULT
+   ========================= */
+
+.product-section {
+    display: block;
+}
+
+
+/* =========================
+   PC PARTS FILTER
+   ========================= */
+
+body:has(#pc:checked) .product-section:not(.pc) {
+    display: none;
+}
+
+
+/* =========================
+   PERIPHERALS FILTER
+   ========================= */
+
+body:has(#peripherals:checked) .product-section:not(.peripherals) {
+    display: none;
+}
+
+
+/* =========================
+   ACCESSORIES FILTER
+   ========================= */
+
+body:has(#accessories:checked) .product-section:not(.accessories) {
+    display: none;
+}
+
+
+/* =========================
+   SNAPDRAGON FILTER
+   ========================= */
+
+body:has(#snapdragon:checked) .product-section:not(.snapdragon) {
+    display: none;
+}
+
+
+/* =========================
+   MEDIATEK FILTER
+   ========================= */
+
+body:has(#mediatek:checked) .product-section:not(.mediatek) {
+    display: none;
+}
+/* =========================
+   Chatgpt had to add this because the code was not working properly and helped in the organization of the code and also teaching me how  to use the this CSS code.
+   ========================= */
