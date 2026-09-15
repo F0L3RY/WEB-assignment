@@ -3,112 +3,149 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About Us </title>
+
+    <meta name="description"
+          content="Learn about NovaLink, our mission, vision, and commitment to providing gaming technology.">
 
     <link rel="icon"
           type="image/gif"
           href="b4aaaa9f-1bb2-49bd-952c-345154653c41.gif">
+
+    <!-- Shared website CSS -->
+    <link rel="stylesheet" href="C:\Users\ST10527697\OneDrive - ADvTECH Ltd\WEB assignment\WEB-assignment\website\CSS_Coding\About.css">
+
 </head>
+
 
 <body>
 
-    <center>
-        <a href="Index.html">
-            <h1>NovaLink</h1>
-        </a>
-    </center>
+    <!-- =====================================================
+         THEME SWITCH
+         ===================================================== -->
 
-    <hr size="3" width="100%" color="black">
+    <input
+        type="checkbox"
+        id="night-mode"
+        aria-label="Toggle dark and light mode"
+    >
 
-    <center>
+    <label
+        for="night-mode"
+        class="theme-switch"
+        aria-label="Toggle dark and light mode"
+    >
+        <span class="sun" aria-hidden="true">☀️</span>
+        <span class="moon" aria-hidden="true">🌙</span>
+    </label>
 
-        <table border="1" cellpadding="15" cellspacing="10" width="80%">
 
-            <!-- Mission -->
-            <tr>
-                <td>
+    <!-- =====================================================
+         MAIN PAGE
+         ===================================================== -->
 
-                    <center>
-                        <h2>Our Mission</h2>
-                    </center>
+    <div class="page">
 
-                    <p>
-                        To be the leading provider of all forms of technology
-                        that will be used by customers who have a need for
-                        technology in gaming, no matter their age or the type
-                        of gaming they are interested in.
-                    </p>
+        <!-- =================================================
+             HEADER
+             ================================================= -->
 
-                </td>
+        <header class="site-header">
+            <center>
+            <a href="Index.html" class="site-logo">
+                <h1>NovaLink</h1>
+            </a>
+</center>
+        </header>
+
+
+        <hr>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
+
+        <main>
+
+            <section class="about-section">
+<table class="category-table" border="1" cellpadding="15" cellspacing="10">
+               <tr>
+                <td><center>
+                    <h2>Our Mission</h2>
+                </center>
+
+                <p>
+                    To be the leading provider of all forms of technology
+                    that will be used by customers who have a need for
+                    technology in gaming, no matter their age or the type
+                    of gaming they are interested in.
+                </p>
+            </td>
             </tr>
-
-            <!-- Vision -->
-            <tr>
-                <td>
-
-                    <center>
-                        <h2>Our Vision</h2>
-                    </center>
-
-                    <p>
-                        To be a highly trusted technology distributor while
-                        maintaining the highest level of customer satisfaction.
-                        We aim to become a local source of information for
-                        gamers, allowing future customers to access reviews,
-                        specifications, and information about the products
-                        they need.
-                    </p>
-
-                </td>
-            </tr>
-
+            </section>
         </table>
 
-    </center>
+            <section class="about-section">
+                <table class="category-table" border="1" cellpadding="15" cellspacing="10">
 
-    <br>
+               <tr><td><center>
+                <h2>Our Vision</h2>
+                </center>
+                <p>
+                    To be a highly trusted technology distributor while
+                    maintaining the highest level of customer satisfaction.
+                    We aim to become a local source of information for
+                    gamers, allowing future customers to access reviews,
+                    specifications, and information about the products
+                    they need.
+                </p></td></tr>
+</table>
+            </section>
 
-    <hr size="3" width="100%" color="black">
+        </main>
 
-    <!-- Footer -->
-    <footer>
 
-        <center>
+        <hr>
+
+
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
+
+        <footer class="site-footer">
 
             <p>
                 &copy; 2023 NovaLink. All rights reserved.
             </p>
 
-            <p>
+            <nav aria-label="Footer navigation">
 
-                <a href="file:///c%3A/Users/ST10527697/OneDrive%20-%20ADvTECH%20Ltd/WEB%20assignment/website/Contact.html"
-                   target="_blank">
+                <a href="Contact.html">
                     Contact Us
                 </a>
 
-                |
+                <span aria-hidden="true"> | </span>
 
-                <a href="file:///c%3A/Users/ST10527697/OneDrive%20-%20ADvTECH%20Ltd/WEB%20assignment/website/Enquiry.html"
-                   target="_blank">
+                <a href="Enquiry.html">
                     🛒 Cart
                 </a>
 
-                |
+                <span aria-hidden="true"> | </span>
 
-                <a href="file:///c%3A/Users/ST10527697/OneDrive%20-%20ADvTECH%20Ltd/WEB%20assignment/website/Products.html"
-                   target="_blank">
+                <a href="Products.html">
                     Products
                 </a>
 
+            </nav>
 
+        </footer>
 
-                
-            </p>
-
-        </center>
-
-    </footer>
+    </div>
 
 </body>
 

@@ -1,5 +1,6 @@
+
 /* =========================================================
-   GLOBAL THEME SWITCH
+   HIDE THE CHECKBOX
    ========================================================= */
 
 #night-mode {
@@ -51,7 +52,7 @@
 
 
 /* =========================================================
-   MAIN PAGE — NIGHT MODE
+   MAIN PAGE — DEFAULT NIGHT THEME
    ========================================================= */
 
 .page {
@@ -74,17 +75,6 @@
 
 
 /* =========================================================
-   DAY MODE — MAIN PAGE
-   ========================================================= */
-
-#night-mode:checked ~ .page {
-    background-color: #808080;
-
-    color: black;
-}
-
-
-/* =========================================================
    HEADINGS
    ========================================================= */
 
@@ -94,13 +84,8 @@
     color: white;
 
     transition: color 0.4s ease;
-}
 
-
-#night-mode:checked ~ .page h1,
-#night-mode:checked ~ .page h2,
-#night-mode:checked ~ .page h3 {
-    color: black;
+    overflow-wrap: break-word;
 }
 
 
@@ -112,11 +97,8 @@
     color: #dddddd;
 
     transition: color 0.4s ease;
-}
 
-
-#night-mode:checked ~ .page p {
-    color: #222;
+    overflow-wrap: break-word;
 }
 
 
@@ -128,6 +110,31 @@
     color: #66b3ff;
 
     transition: color 0.3s ease;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   DAY MODE
+   ========================================================= */
+
+#night-mode:checked ~ .page {
+    background-color: #808080;
+
+    color: black;
+}
+
+
+#night-mode:checked ~ .page h1,
+#night-mode:checked ~ .page h2,
+#night-mode:checked ~ .page h3 {
+    color: black;
+}
+
+
+#night-mode:checked ~ .page p {
+    color: #222;
 }
 
 
@@ -175,7 +182,7 @@
 
 
 /* =========================================================
-   TABLES — DAY MODE
+   DAY MODE TABLES
    ========================================================= */
 
 #night-mode:checked ~ .page table {
@@ -193,20 +200,20 @@
 
 
 /* =========================================================
-   TABLE CELL HOVER — NIGHT MODE
+   TABLE HOVER — NIGHT MODE
    ========================================================= */
 
 .page table td:hover {
     transform: translateY(-8px);
 
-    background-color: black;
-
     box-shadow: 0 8px 20px purple;
+
+    background-color: black;
 }
 
 
 /* =========================================================
-   TABLE CELL HOVER — DAY MODE
+   TABLE HOVER — DAY MODE
    ========================================================= */
 
 #night-mode:checked ~ .page table td:hover {
@@ -217,7 +224,7 @@
 
 
 /* =========================================================
-   BUTTONS — NIGHT MODE
+   BUTTONS
    ========================================================= */
 
 .page button {
@@ -241,7 +248,7 @@
 
 
 /* =========================================================
-   BUTTONS — DAY MODE
+   DAY MODE BUTTONS
    ========================================================= */
 
 #night-mode:checked ~ .page button {
@@ -325,7 +332,7 @@
 
 
 /* =========================================================
-   HIDE FILTER RADIO BUTTONS
+   HIDE RADIO BUTTONS
    ========================================================= */
 
 .filter-buttons input {
@@ -404,7 +411,9 @@
 }
 
 
-/* Keep selected button blue in Day Mode */
+/*
+   Keep selected filter blue in Day Mode
+*/
 
 #night-mode:checked ~ .page .filter-buttons input:checked + label {
     background-color: #007bff;
@@ -416,89 +425,150 @@
 
 
 /* =========================================================
-   PRODUCT SECTIONS
-   ========================================================= */
-
-.product-section {
-    display: block;
-
-    width: 100%;
-
-    box-sizing: border-box;
-}
-
-
-/* =========================================================
-   PRODUCT FILTERS
-   ========================================================= */
-
-body:has(#pc:checked) .product-section:not(.pc) {
-    display: none;
-}
-
-
-body:has(#peripherals:checked) .product-section:not(.peripherals) {
-    display: none;
-}
-
-
-body:has(#accessories:checked) .product-section:not(.accessories) {
-    display: none;
-}
-
-
-body:has(#snapdragon:checked) .product-section:not(.snapdragon) {
-    display: none;
-}
-
-
-body:has(#mediatek:checked) .product-section:not(.mediatek) {
-    display: none;
-}
-
-
-/* =========================================================
-   AUTOMATIC DEVICE THEME — DARK
+   AUTOMATIC SYSTEM THEME DETECTION
    ========================================================= */
 
 /*
-   This provides the default Night Mode when the visitor's
-   device/browser prefers dark mode.
+   If the visitor's device/browser is set to DARK MODE,
+   the page automatically uses the night theme.
 
-   The JavaScript we add later will allow a manually selected
-   theme to override this.
+   This works without JavaScript.
 */
 
 @media (prefers-color-scheme: dark) {
 
-    body {
-        background-color: #121212;
-    }
+    /*
+       Only apply automatic dark colors when the checkbox
+       has NOT been manually checked for Day Mode.
+    */
 
     .page {
         background-color: #121212;
 
         color: white;
     }
+
+    .page h1,
+    .page h2,
+    .page h3 {
+        color: white;
+    }
+
+    .page p {
+        color: #dddddd;
+    }
+
+    .page a {
+        color: #66b3ff;
+    }
+
+    .page table {
+        background-color: #1e1e1e;
+
+        color: white;
+
+        border-color: #666;
+    }
+
+    .page td {
+        border-color: #666;
+    }
+
+    .page button {
+        background-color: #333;
+
+        color: white;
+
+        border-color: #777;
+    }
 }
 
 
 /* =========================================================
-   AUTOMATIC DEVICE THEME — LIGHT
+   LARGE PC / DESKTOP
+   1025px AND ABOVE
    ========================================================= */
 
-/*
-   This provides the default Day Mode when the visitor's
-   device/browser prefers light mode.
+@media (min-width: 1025px) {
 
-   The saved user choice will take priority once we add
-   the shared JavaScript.
-*/
+    .page {
+        padding: 20px 30px;
+    }
 
-@media (prefers-color-scheme: light) {
+    .page h1 {
+        font-size: 2.2rem;
+    }
 
-    body {
-        background-color: #808080;
+    .page h2 {
+        font-size: 1.8rem;
+    }
+
+    .page h3 {
+        font-size: 1.4rem;
+    }
+
+    .page p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .page table {
+        width: 80%;
+    }
+
+    .theme-switch {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   601px — 1024px
+   ========================================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .page {
+        padding: 15px;
+    }
+
+    .page h1 {
+        font-size: 2rem;
+    }
+
+    .page h2 {
+        font-size: 1.6rem;
+    }
+
+    .page h3 {
+        font-size: 1.25rem;
+    }
+
+    .page p {
+        font-size: 0.95rem;
+
+        line-height: 1.5;
+    }
+
+    .page table {
+        width: 95%;
+    }
+
+    .filter-buttons {
+        margin: 20px auto;
+    }
+
+    .filter-buttons label {
+        padding: 10px 16px;
+
+        margin: 4px;
+    }
+
+    .theme-switch {
+        top: 15px;
+        right: 15px;
     }
 }
 
@@ -512,54 +582,56 @@ body:has(#mediatek:checked) .product-section:not(.mediatek) {
 
     .page {
         padding: 10px;
+    }
 
-        width: 100%;
+    /*
+       Prevent content from becoming wider than
+       the phone screen.
+    */
 
-        overflow-x: hidden;
+    .page,
+    .page * {
+        max-width: 100%;
     }
 
 
-    /* Headings */
+    /* -------------------------
+       HEADINGS
+       ------------------------- */
 
     .page h1 {
         font-size: 1.6rem;
 
         line-height: 1.2;
-
-        overflow-wrap: break-word;
     }
-
 
     .page h2 {
         font-size: 1.35rem;
 
         line-height: 1.25;
-
-        overflow-wrap: break-word;
     }
-
 
     .page h3 {
         font-size: 1.15rem;
 
         line-height: 1.3;
-
-        overflow-wrap: break-word;
     }
 
 
-    /* Paragraphs */
+    /* -------------------------
+       PARAGRAPHS
+       ------------------------- */
 
     .page p {
         font-size: 0.9rem;
 
         line-height: 1.5;
-
-        overflow-wrap: break-word;
     }
 
 
-    /* Theme switch */
+    /* -------------------------
+       THEME SWITCH
+       ------------------------- */
 
     .theme-switch {
         top: 10px;
@@ -573,27 +645,40 @@ body:has(#mediatek:checked) .product-section:not(.mediatek) {
         padding: 0 6px;
     }
 
-
     .theme-switch .sun,
     .theme-switch .moon {
         font-size: 16px;
     }
 
 
-    /* Tables */
+    /* -------------------------
+       TABLES
+       ------------------------- */
 
     .page table {
         width: 100%;
 
-        max-width: 100%;
+        font-size: 0.8rem;
+    }
 
+
+    /*
+       Allow wide tables to scroll instead of
+       breaking the phone layout.
+    */
+
+    .page table {
         display: block;
 
         overflow-x: auto;
 
-        font-size: 0.8rem;
+        white-space: nowrap;
     }
 
+
+    /* -------------------------
+       TABLE CELLS
+       ------------------------- */
 
     .page td,
     .page th {
@@ -602,8 +687,8 @@ body:has(#mediatek:checked) .product-section:not(.mediatek) {
 
 
     /*
-       Phones don't have normal mouse hover,
-       so remove the large table movement.
+       Reduce the hover movement on phones.
+       Phones don't normally have mouse hover.
     */
 
     .page table td:hover {
@@ -613,7 +698,9 @@ body:has(#mediatek:checked) .product-section:not(.mediatek) {
     }
 
 
-    /* Filter buttons */
+    /* -------------------------
+       FILTER BUTTONS
+       ------------------------- */
 
     .filter-buttons {
         margin: 15px auto;
@@ -631,7 +718,9 @@ body:has(#mediatek:checked) .product-section:not(.mediatek) {
     }
 
 
-    /* Buttons */
+    /* -------------------------
+       BUTTONS
+       ------------------------- */
 
     .page button {
         padding: 8px 12px;
@@ -640,7 +729,9 @@ body:has(#mediatek:checked) .product-section:not(.mediatek) {
     }
 
 
-    /* Category links */
+    /* -------------------------
+       CATEGORY LINKS
+       ------------------------- */
 
     .category-link {
         padding: 8px;
@@ -659,31 +750,25 @@ body:has(#mediatek:checked) .product-section:not(.mediatek) {
         font-size: 12px;
     }
 
-
     .page {
         padding: 8px;
     }
-
 
     .page h1 {
         font-size: 1.4rem;
     }
 
-
     .page h2 {
         font-size: 1.2rem;
     }
-
 
     .page h3 {
         font-size: 1rem;
     }
 
-
     .page p {
         font-size: 0.8rem;
     }
-
 
     .theme-switch {
         width: 55px;
@@ -695,19 +780,16 @@ body:has(#mediatek:checked) .product-section:not(.mediatek) {
         right: 8px;
     }
 
-
     .theme-switch .sun,
     .theme-switch .moon {
         font-size: 14px;
     }
-
 
     .filter-buttons label {
         padding: 7px 9px;
 
         font-size: 0.75rem;
     }
-
 
     .page table {
         font-size: 0.7rem;
@@ -716,113 +798,19 @@ body:has(#mediatek:checked) .product-section:not(.mediatek) {
 
 
 /* =========================================================
-   TABLET
-   601px — 1024px
+   ACCESSIBILITY
    ========================================================= */
 
-@media (min-width: 601px) and (max-width: 1024px) {
-
-    .page {
-        padding: 15px;
-    }
-
-
-    .page h1 {
-        font-size: 2rem;
-    }
-
-
-    .page h2 {
-        font-size: 1.6rem;
-    }
-
-
-    .page h3 {
-        font-size: 1.25rem;
-    }
-
-
-    .page p {
-        font-size: 0.95rem;
-
-        line-height: 1.5;
-    }
-
-
-    .page table {
-        width: 95%;
-    }
-
-
-    .filter-buttons {
-        margin: 20px auto;
-    }
-
-
-    .filter-buttons label {
-        padding: 10px 16px;
-
-        margin: 4px;
-    }
-
-
-    .theme-switch {
-        top: 15px;
-
-        right: 15px;
-    }
-}
-
-
-/* =========================================================
-   PC / DESKTOP
-   1025px AND ABOVE
-   ========================================================= */
-
-@media (min-width: 1025px) {
-
-    .page {
-        padding: 20px 30px;
-    }
-
-
-    .page h1 {
-        font-size: 2.2rem;
-    }
-
-
-    .page h2 {
-        font-size: 1.8rem;
-    }
-
-
-    .page h3 {
-        font-size: 1.4rem;
-    }
-
-
-    .page p {
-        font-size: 1rem;
-
-        line-height: 1.6;
-    }
-
-
-    .page table {
-        width: 80%;
-    }
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
+/*
+   Respect users who prefer reduced animation.
+*/
 
 @media (prefers-reduced-motion: reduce) {
 
     .page,
+    .theme-switch,
     .page *,
-    .theme-switch {
+    .filter-buttons label {
         transition: none !important;
     }
 }

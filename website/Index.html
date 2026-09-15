@@ -4,290 +4,461 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Home Page</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>NovaLink </title>
+
+    <meta name="description"
+          content="NovaLink - Your technology and gaming store for PC parts, smartphones, peripherals and accessories.">
 
     <link rel="icon"
           type="image/gif"
           href="b4aaaa9f-1bb2-49bd-952c-345154653c41.gif">
+
+    <!-- Home page CSS -->
     <link rel="stylesheet" href="C:\Users\ST10527697\OneDrive - ADvTECH Ltd\WEB assignment\WEB-assignment\website\CSS_Coding\Home.css">
+
 
 </head>
 
+
 <body>
 
-    <!-- Day/Night Switch -->
-    <input type="checkbox" id="night-mode">
+    <!-- =====================================================
+         DAY / NIGHT SWITCH
+         ===================================================== -->
 
-    <label for="night-mode" class="theme-switch">
-        <span class="sun">☀️</span>
-        <span class="moon">🌙</span>
+    <input
+        type="checkbox"
+        id="night-mode"
+        aria-label="Toggle light and dark mode"
+    >
+
+    <label
+        for="night-mode"
+        class="theme-switch"
+        aria-label="Toggle light and dark mode"
+    >
+        <span class="sun" aria-hidden="true">☀️</span>
+        <span class="moon" aria-hidden="true">🌙</span>
     </label>
+
+
+    <!-- =====================================================
+         MAIN PAGE
+         ===================================================== -->
 
     <div class="page">
 
 
-       <center>
+        <!-- =================================================
+             HEADER
+             ================================================= -->
 
-    <h1>NovaLink</h1>
+        <header class="site-header">
+            <center>
+            <h1>NovaLink</h1>
+            </center>
+        </header>
 
-</center>
 
-        <hr size="3" width="100%" color="black">
+        <hr>
 
-        <h2>Your Technology and Gaming Store</h2>
 
-        <p>
-            Welcome to NovaLink, your local source for gaming technology,
-            computer hardware, smartphones, peripherals and accessories.
-        </p>
+        <!-- =================================================
+             INTRODUCTION
+             ================================================= -->
 
-        <p>
-            Whether you are building a gaming PC, upgrading your setup,
-            or looking for the latest smartphone, NovaLink has something
-            for you.
-        </p>
+        <section class="intro">
 
-    </center>
+            <h2>Your Technology and Gaming Store</h2>
 
-    <br>
+            <p>
+                Welcome to NovaLink, your local source for gaming
+                technology, computer hardware, smartphones,
+                peripherals and accessories.
+            </p>
 
-    <!-- Navigation -->
-    <center>
+            <p>
+                Whether you are building a gaming PC, upgrading
+                your setup, or looking for the latest smartphone,
+                NovaLink has something for you.
+            </p>
 
-        <h2>Explore NovaLink</h2>
+        </section>
 
-        <table class="category-table" border="1" cellpadding="15" cellspacing="10">
 
-            <link>
-            <tr>
-                <td>
-                    <center>
-                        <a href="About.html#about-us" class="category-link">
-                            <h3>About Us</h3>
+        <br>
 
-                        <p>
-                            Learn more about NovaLink,
-                            our mission and our vision.
-                        </p>
 
-                        </a>
-                    </center>
-                </td>
+        <!-- =================================================
+             NOVALINK NAVIGATION
+             ================================================= -->
 
-                <td>
-                    <center>
-                        <a href="Contact.html#contact-us" class="category-link">
-                            <h3>Contact Us</h3>
-            
+        <section class="navigation-section">
 
-                        <p>
-                            Have a question or need assistance?
-                            Get in touch with us.
-                        </p>
+            <h2>Explore NovaLink</h2>
 
-                        </a>
-                    </center>
-                </td>
 
-                <td>
-                    <center>
-                        <a href="Enquiry.html#shopping-cart" class="category-link">
-                            <h3>Shopping Cart</h3>
-                        
+            <table class="category-table" border="1" cellpadding="15" cellspacing="10">
 
-                        <p>
-                            View the items you have selected
-                            and continue shopping.
-                        </p>
-                        </a>
-                    </center>
-                </td>
+                <tbody>
 
-            </tr>
-            </link>
-        </table>
+                    <tr>
 
-    </center>
+                        <!-- About Us -->
 
-    <br>
+                        <td>
 
-    <hr size="3" width="100%" color="black">
+                            <a href="About.html#about-us"
+                               class="category-link">
 
-    <!-- Product Categories -->
-    <center>
+                                <h3>About Us</h3>
 
-        <h2>Shop Our Categories</h2>
+                                <p>
+                                    Learn more about NovaLink,
+                                    our mission and our vision.
+                                </p>
 
-        <table class="category-table" border="1" cellpadding="15" cellspacing="10">
+                            </a>
 
-            <tr>
-                <link>
-                <td>
-    <a href="Products.html#pc-parts" class="category-link">
+                        </td>
 
-       <center> <img src="1658998.png" width="200" height="200">
 
-        <h3>PC Parts</h3>
+                        <!-- Contact Us -->
 
-        <p>
-            Graphics cards, processors,
-            RAM, storage and more.
-        </p></link>
-        </center>
-    </a>
-</td>
+                        <td>
 
+                            <a href="Contact.html#contact-us"
+                               class="category-link">
 
-                <td><link>
-                    <center> 
-    <a href="Products.html#Accessories" class="category-link">
+                                <h3>Contact Us</h3>
 
-        <img src="OIP (3).webp" width="200" height="200">
+                                <p>
+                                    Have a question or need assistance?
+                                    Get in touch with us.
+                                </p>
 
-        <h3>Accessories</h3>
+                            </a>
 
-        <p>
-            Mouse pads, microphones,
-            DACs and other accessories.
-        </p>
-</link>
-    </a>
-                    </center>
-                </td>
+                        </td>
 
-                <td><link>
-                    <center>
-    <a href="Products.html#peripherals" class="category-link">
 
-        <img src="OIP (3).webp" width="200" height="200">
+                        <!-- Shopping Cart -->
 
-        <h3>Peripherals</h3>
+                        <td>
 
-        <p>
-            Keyboards, mice, headsets
-            and gaming monitors.
-        </p>
+                            <a href="Enquiry.html#shopping-cart"
+                               class="category-link">
 
-    </a></link>
-         </center>
-                </td>
+                                <h3>Shopping Cart</h3>
 
-            </tr>
+                                <p>
+                                    View the items you have selected
+                                    and continue shopping.
+                                </p>
 
-            <tr><link>
+                            </a>
 
-                <td> <center>
-    <a href="Products.html#snapdragon" class="category-link">
+                        </td>
 
-        <img src="snapdragon-8-elite-badge.jpeg"
-             width="200"
-             height="200">
+                    </tr>
 
-        <h3>Snapdragon Phones</h3>
+                </tbody>
 
-        <p>
-            Explore smartphones powered
-            by Snapdragon processors.
-        </p>
-</link>
-    </a></center>
-</td>
+            </table>
 
+        </section>
 
-                <td><link>
-                    <center> 
-    <a href="Products.html#mediatek" class="category-link">
 
-        <img src="OIP (2).webp"
-             width="200"
-             height="200">
+        <br>
 
-        <h3>MediaTek Phones</h3>
+        <hr>
 
-        <p>
-            Discover smartphones powered
-            by MediaTek processors.
-        </p>
 
-    </a>
-</link>   </center>
-                </td>
+        <!-- =================================================
+             PRODUCT CATEGORIES
+             ================================================= -->
 
-                <td><link>
-                    <center> <a href="Products.html#novalink" class="category-link">
-                        <h3>Shop NovaLink</h3>
+        <section class="categories-section">
 
+            <h2>Shop Our Categories</h2>
 
-        <p>
-          Find the technology you need for your setup.
-        </p>
-                        </a>
-                    </center>
-                </td>
 
-            </tr>
-        </link>
+            <table class="category-table" border="1" cellpadding="15" cellspacing="10">
 
-        </table>
+                <tbody>
 
-    </center>
+                    <!-- ================================
+                         FIRST CATEGORY ROW
+                         ================================ -->
 
-    <br>
+                    <tr>
 
-    <hr size="3" width="100%" color="black">
+                        <!-- PC Parts -->
 
-    <!-- Tech Reviews   -->
-    <center>
+                        <td>
 
-        <h2>Product Reviews</h2>
+                            <a href="Products.html#pc-parts"
+                               class="category-link">
 
-        <table border="1" cellpadding="15" cellspacing="10">
+                                <img
+                                    src="1658998.png"
+                                    alt="PC Parts"
+                                    width="200"
+                                    height="200"
+                                    loading="lazy"
+                                >
 
-            <tr>
+                                <h3>PC Parts</h3>
 
-                <td>
-                 <center>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/TKhiNkloVr0?si=NXpRQh93is4FwGMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </center>
-                </td>
+                                <p>
+                                    Graphics cards, processors,
+                                    RAM, storage and more.
+                                </p>
 
-                <td>
-                    <center>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3WOJE41_mwc?si=5DAUbsI4dbYSxRXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </center>
-                </td>
-           
+                            </a>
 
-            </tr>
+                        </td>
 
-        </table>
 
-    </center>
+                        <!-- Accessories -->
 
-    <br>
+                        <td>
 
-   
-    <br>
+                            <a href="Products.html#Accessories"
+                               class="category-link">
 
-    <hr size="3" width="100%" color="black">
+                                <img
+                                    src="OIP (3).webp"
+                                    alt="Technology accessories"
+                                    width="200"
+                                    height="200"
+                                    loading="lazy"
+                                >
 
-    <!-- Footer -->
-    <footer>
+                                <h3>Accessories</h3>
 
-        <center>
+                                <p>
+                                    Mouse pads, microphones,
+                                    DACs and other accessories.
+                                </p>
+
+                            </a>
+
+                        </td>
+
+
+                        <!-- Peripherals -->
+
+                        <td>
+
+                            <a href="Products.html#peripherals"
+                               class="category-link">
+
+                                <img
+                                    src="OIP (3).webp"
+                                    alt="Gaming peripherals"
+                                    width="200"
+                                    height="200"
+                                    loading="lazy"
+                                >
+
+                                <h3>Peripherals</h3>
+
+                                <p>
+                                    Keyboards, mice, headsets
+                                    and gaming monitors.
+                                </p>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- ================================
+                         SECOND CATEGORY ROW
+                         ================================ -->
+
+                    <tr>
+
+                        <!-- Snapdragon -->
+
+                        <td>
+
+                            <a href="Products.html#snapdragon"
+                               class="category-link">
+
+                                <img
+                                    src="snapdragon-8-elite-badge.jpeg"
+                                    alt="Snapdragon phones"
+                                    width="200"
+                                    height="200"
+                                    loading="lazy"
+                                >
+
+                                <h3>Snapdragon Phones</h3>
+
+                                <p>
+                                    Explore smartphones powered
+                                    by Snapdragon processors.
+                                </p>
+
+                            </a>
+
+                        </td>
+
+
+                        <!-- MediaTek -->
+
+                        <td>
+
+                            <a href="Products.html#mediatek"
+                               class="category-link">
+
+                                <img
+                                    src="OIP (2).webp"
+                                    alt="MediaTek phones"
+                                    width="200"
+                                    height="200"
+                                    loading="lazy"
+                                >
+
+                                <h3>MediaTek Phones</h3>
+
+                                <p>
+                                    Discover smartphones powered
+                                    by MediaTek processors.
+                                </p>
+
+                            </a>
+
+                        </td>
+
+
+                        <!-- NovaLink -->
+
+                        <td>
+
+                            <a href="Products.html#novalink"
+                               class="category-link">
+
+                                <h3>Shop NovaLink</h3>
+
+                                <p>
+                                    Find the technology you need
+                                    for your setup.
+                                </p>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <br>
+
+        <hr>
+
+
+        <!-- =================================================
+             PRODUCT REVIEWS
+             ================================================= -->
+
+        <section class="reviews-section">
+
+            <h2>Product Reviews</h2>
+
+
+            <table class="review-table">
+
+                <tbody>
+
+                    <tr>
+
+                        <!-- Review Video 1 -->
+
+                        <td>
+
+                            <div class="video-container">
+
+                                <iframe
+                                    src="https://www.youtube.com/embed/TKhiNkloVr0?si=NXpRQh93is4FwGMo"
+                                    title="NovaLink product review"
+                                    loading="lazy"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+
+                            </div>
+
+                        </td>
+
+
+                        <!-- Review Video 2 -->
+
+                        <td>
+
+                            <div class="video-container">
+
+                                <iframe
+                                    src="https://www.youtube.com/embed/3WOJE41_mwc?si=5DAUbsI4dbYSxRXY"
+                                    title="NovaLink technology product review"
+                                    loading="lazy"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <br>
+
+        <hr>
+
+
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
+
+        <footer class="site-footer">
 
             <p>
                 &copy; 2023 NovaLink. All rights reserved.
-                <a href="mailto:info@novalink.com">info@novalink.com</a>
+                <a href="mailto:info@novalink.com">
+                    info@novalink.com
+                </a>
             </p>
 
-        </center>
+        </footer>
 
-    </footer>
 
     </div>
+
+
 </body>
 
 </html>
